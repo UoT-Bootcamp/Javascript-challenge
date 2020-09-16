@@ -1,6 +1,6 @@
 # JavaScript and DOM Manipulation
 
-![ufo](
+![ufo](https://github.com/UoT-Bootcamp/Javascript-challenge/blob/master/ufo_image.jpeg) <br/>
 
 ## Background
 
