@@ -23,6 +23,8 @@ The planet Earth needs to know what we have found!
 
 * We use a date form in the HTML document and write JavaScript code that will listen for events and search through the date/time column to find rows that match user input.
 
+![ufo](https://github.com/UoT-Bootcamp/Javascript-challenge/blob/master/UFO-level-1/UFO1_website_image.png)<br/>
+
 
 ### Level 2: Multiple Search Categories
 
