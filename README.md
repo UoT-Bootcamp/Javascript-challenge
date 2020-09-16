@@ -1,4 +1,4 @@
-# JavaScript and DOM Manipulation
+# JavaScript and DOM Manipulation : UFO Sight Data
 
 ![ufo](https://github.com/UoT-Bootcamp/Javascript-challenge/blob/master/ufo_image.jpeg) <br/>
 
