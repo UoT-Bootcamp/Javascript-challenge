@@ -15,9 +15,9 @@ The planet Earth needs to know what we have found!
 
 ### Level 1: Automatic Table and Date Search
 
-* For this, we create a basic HTML web page or use the index.html file.
+* For this, we create a basic HTML web page.
 
-* Using the UFO dataset provided in the form of an array of JavaScript objects, we appends a table to teh web page and then adds new rows of data for each UFO sighting.
+* Using the UFO dataset provided in the form of an array of JavaScript objects, we appends a table to the web page and then adds new rows of data for each UFO sighting.
 
 * We have a column for date/time, city, state, country, shape, and comment.
 
