@@ -22,6 +22,8 @@ function tableBuild(ufoSightData){
     })
 };
 
+// d3.selectAll(".filter").on("change", runEnter)
+
 
 // Complete the event handler function for the form
 function runEnter() {
@@ -29,19 +31,63 @@ function runEnter() {
     d3.event.preventDefault();
     // Select the input element, get the raw HTML node and get the value property of the input element
     var dates = d3.select("#datetime").property("value");
-    var cities = d3.select("#ufo-city").property("value");
-    // var state = d3.select("#ufo-state").property("value");
-    // var country = d3.select("#ufo-country").property("value");
-    // var shape = d3.select("#ufo-shape").property("value");
+    var cities = d3.select("#city").property("value");
+    var state = d3.select("#state").property("value");
+    var country = d3.select("#country").property("value");
+    var shape = d3.select("#shape").property("value");
+
+    // var inputText = d3.select(this).selectAll("input").property("value");
+    // var inputId = d3.select(this).selectAll("input").attr("id")
+
+    // console.log(inputText);
 
     // Select the input element, get the raw HTML node and get the value property of the input element
     var filteredData = tableData;
+
+    // // If date provided is True, then..
+    // if (inputText){
+    //     // Filter the data to match the date provided by the user
+    //     filteredData = filteredData.filter((sightDate => sightDate[inputId] === inputText));
+    //     console.log(filteredData);
+    // }
+
     // If date provided is True, then..
+
     if (dates){
         // Filter the data to match the date provided by the user
         filteredData = filteredData.filter((sightDate => sightDate.datetime === dates));
         console.log(filteredData);
     }
+
+    if (cities){
+        // Filter the data to match the date provided by the user
+        filteredData = filteredData.filter((sightCity => sightCity.city === cities));
+        console.log(filteredData);
+    }
+
+    if (state){
+        // Filter the data to match the date provided by the user
+        filteredData = filteredData.filter((sightState => sightState.state === state));
+        console.log(filteredData);
+    }
+
+    if (country){
+        // Filter the data to match the date provided by the user
+        filteredData = filteredData.filter((sightCountry => sightCountry.country === country));
+        console.log(filteredData);
+    }
+
+    if (shape){
+        // Filter the data to match the date provided by the user
+        filteredData = filteredData.filter(sightShape => sightShape.shape === shape);
+        console.log(filteredData);
+    }
+
+    if(filteredData.length == 0){
+        d3.select("#message").text("No data found!")
+    }
+
+
     // Call the tableBuild function and pass the filtered data with matching date provided by the user
     tableBuild(filteredData);
     // log the filtered data
