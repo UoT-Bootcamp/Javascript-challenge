@@ -80,7 +80,7 @@ function runEnter() {
         console.log(filteredData);
     }
 
-    // If no data provided, then..
+    // If no data returned, then..
     if(filteredData.length == 0){
         d3.select("#message").text("No data found!")
     }

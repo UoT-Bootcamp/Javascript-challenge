@@ -37,6 +37,12 @@ function runEnter() {
         filteredData = filteredData.filter(sightDate => sightDate.datetime === dates);
         console.log(filteredData);
     }
+
+    // If no data returned, then..
+    if(filteredData.length == 0){
+        d3.select("#message").text("No data found!")
+    }
+
     // Call the tableBuild function and pass the filtered data with matching date provided by the user
     tableBuild(filteredData);
     // log the filtered data
