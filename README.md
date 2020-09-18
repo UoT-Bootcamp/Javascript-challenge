@@ -37,4 +37,4 @@ The planet Earth needs to know what we have found!
   * country
   * shape
   
-  
+  ![ufo](https://github.com/UoT-Bootcamp/Javascript-challenge/blob/master/UFO-level-2/ufo2_website_image.png)
