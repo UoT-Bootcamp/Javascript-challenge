@@ -40,7 +40,10 @@ function runEnter() {
 
     // If no data returned, then..
     if(filteredData.length == 0){
-        d3.select("#message").text("No data found!")
+        d3.select("#message").text("No data found!");
+    }
+    else {
+        d3.select("#message").text("");
     }
 
     // Call the tableBuild function and pass the filtered data with matching date provided by the user
