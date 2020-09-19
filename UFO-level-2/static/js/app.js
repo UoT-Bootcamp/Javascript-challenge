@@ -82,7 +82,11 @@ function runEnter() {
 
     // If no data returned, then..
     if(filteredData.length == 0){
-        d3.select("#message").text("No data found!")
+        d3.select("#message").text("No data found!");
+
+    }
+    else {
+        d3.select("#message").text("");
     }
 
     // Call the tableBuild function and pass the filtered data with matching date provided by the user
@@ -96,12 +100,13 @@ function runEnter() {
 // Select the button
 var filterButton = d3.selectAll("#filter-btn");
 // Select the form
-var form = d3.selectAll("#form");
+// var form = d3.selectAll("#form");
 
 
 // Create event handlers 
 filterButton.on("click", runEnter);
-form.on("submit", runEnter);
+// form.on("submit", runEnter);
+d3.selectAll(".filter").on("change", runEnter);
 
 
 // Call the function 'tableBuild' to get the original data
