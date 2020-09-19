@@ -6,22 +6,16 @@ var tbody = d3.select("tbody");
 
 // Create a function to display the table of data
 function tableBuild(ufoSightData){
-
     // Remove any data from the table body
     tbody.html("");
-
     // Loop Through `data` and console.log each UFO report object
     ufoSightData.forEach(function(ufoData){
-
         // Use d3 to append one table row `tr` for each UFO report object
         var row = tbody.append("tr");
-
         // Use `Object.entries` to console.log each UFO report value
         Object.entries(ufoData).forEach(function([key, value]){   
-
             //Use d3 to append 1 cell per UFO report value (datetime, city, state, country, shape, durationMinutes, comments)
             var cell = row.append("td");
-
             // Use d3 to update each cell's text with UFO report values (datetime, city, state, country, shape, durationMinutes, comments)
             cell.text(value);
         })
@@ -31,7 +25,6 @@ function tableBuild(ufoSightData){
 
 // Complete the event handler function for the form
 function runEnter() {
-
     // Prevent the page from refreshing
     d3.event.preventDefault();
 
@@ -42,7 +35,7 @@ function runEnter() {
     var country = d3.select("#country").property("value");
     var shape = d3.select("#shape").property("value");
 
-    // Select the input element, get the raw HTML node and get the value property of the input element
+    // Create a copy of the data
     var filteredData = tableData;
     
     // If Date provided is True, then..
@@ -54,28 +47,28 @@ function runEnter() {
 
     // If City provided is True, then..
     if (cities){
-        // Filter the data to match the date provided by the user
+        // Filter the data to match the city provided by the user
         filteredData = filteredData.filter((sightCity => sightCity.city === cities));
         console.log(filteredData);
     }
 
     // If State provided is True, then..
     if (state){
-        // Filter the data to match the date provided by the user
+        // Filter the data to match the state provided by the user
         filteredData = filteredData.filter((sightState => sightState.state === state));
         console.log(filteredData);
     }
 
     // If Country provided is True, then..
     if (country){
-        // Filter the data to match the date provided by the user
+        // Filter the data to match the country provided by the user
         filteredData = filteredData.filter((sightCountry => sightCountry.country === country));
         console.log(filteredData);
     }
 
     // If Shape provided is True, then..
     if (shape){
-        // Filter the data to match the date provided by the user
+        // Filter the data to match the shape provided by the user
         filteredData = filteredData.filter(sightShape => sightShape.shape === shape);
         console.log(filteredData);
     }
@@ -83,7 +76,6 @@ function runEnter() {
     // If no data returned, then..
     if(filteredData.length == 0){
         d3.select("#message").text("No data found!");
-
     }
     else {
         d3.select("#message").text("");
@@ -96,20 +88,12 @@ function runEnter() {
     console.log(filteredData);
 };
 
-
 // Select the button
 var filterButton = d3.selectAll("#filter-btn");
-// Select the form
-// var form = d3.selectAll("#form");
 
-
-// Create event handlers 
+// Create event handlers
 filterButton.on("click", runEnter);
-// form.on("submit", runEnter);
 d3.selectAll(".filter").on("change", runEnter);
-
 
 // Call the function 'tableBuild' to get the original data
 tableBuild(tableData);
-
-
