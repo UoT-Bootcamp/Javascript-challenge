@@ -13,7 +13,7 @@ That's why we wrote code that will create a table dynamically based upon a datas
 The planet Earth needs to know what we have found!
 
 
-### Level 1: Automatic Table and Date Search
+### Level 1: Automatic Table and Date Search - [GitHub Pages link](https://uot-bootcamp.github.io/UFO-Sight-Data/UFO-level-1/)
 
 * For this, we created a basic HTML web page.
 
@@ -26,7 +26,7 @@ The planet Earth needs to know what we have found!
 ![ufo](https://github.com/UoT-Bootcamp/Javascript-challenge/blob/master/UFO-level-1/UFO1_website_image.png)<br/>
 
 
-### Level 2: Multiple Search Categories
+### Level 2: Multiple Search Categories - [GitHub Pages link](https://uot-bootcamp.github.io/UFO-Sight-Data/UFO-level-2/)
 
 * For this, we completed all of Level 1 criteria.
 
